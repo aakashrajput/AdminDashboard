@@ -149,49 +149,43 @@ session_start();
                         <div class="collapse " id="componentsExamples">
                             <ul class="nav">
                               <li class="nav-item ">
-                                  <a class="nav-link" href="./components/panels.html">
+                                  <a class="nav-link" href="./product_android.php">
                                       <span class="sidebar-mini">A</span>
                                       <span class="sidebar-normal">Android</span>
                                   </a>
                               </li>
                                 <li class="nav-item ">
-                                    <a class="nav-link" href="./components/buttons.html">
+                                    <a class="nav-link" href="./product_ai.php">
                                         <span class="sidebar-mini">AI</span>
                                         <span class="sidebar-normal">Artificial Intelligence</span>
                                     </a>
                                 </li>
                                 <li class="nav-item ">
-                                    <a class="nav-link" href="./components/grid.html">
+                                    <a class="nav-link" href="./product_ml.php">
                                         <span class="sidebar-mini">ML</span>
                                         <span class="sidebar-normal">Machine Learning</span>
                                     </a>
                                 </li>
                                 <li class="nav-item ">
-                                    <a class="nav-link" href="./components/panels.html">
-                                        <span class="sidebar-mini">H</span>
-                                        <span class="sidebar-normal">Home</span>
-                                    </a>
-                                </li>
-                                <li class="nav-item ">
-                                    <a class="nav-link" href="./components/sweet-alert.html">
+                                    <a class="nav-link" href="./product_iot.php">
                                         <span class="sidebar-mini">IOT</span>
                                         <span class="sidebar-normal">Internet Of Things</span>
                                     </a>
                                 </li>
                                 <li class="nav-item ">
-                                    <a class="nav-link" href="./components/notifications.html">
+                                    <a class="nav-link" href="./product_plugins.php">
                                         <span class="sidebar-mini">P</span>
                                         <span class="sidebar-normal">Plugins</span>
                                     </a>
                                 </li>
                                 <li class="nav-item ">
-                                    <a class="nav-link" href="./components/icons.html">
+                                    <a class="nav-link" href="./product_security.php">
                                         <span class="sidebar-mini">S</span>
                                         <span class="sidebar-normal">Security</span>
                                     </a>
                                 </li>
                                 <li class="nav-item ">
-                                    <a class="nav-link" href="./components/typography.html">
+                                    <a class="nav-link" href="./product_web.php">
                                         <span class="sidebar-mini">Web</span>
                                         <span class="sidebar-normal">Web Development</span>
                                     </a>
@@ -210,7 +204,7 @@ session_start();
                           <div class="collapse " id="formsExamples">
                               <ul class="nav">
                                 <li class="nav-item ">
-                                    <a class="nav-link" href="./forms/extended.html">
+                                    <a class="nav-link" href="./products/extended.html">
                                         <span class="sidebar-mini">G</span>
                                         <span class="sidebar-normal">Graphic Design</span>
                                     </a>
@@ -278,8 +272,8 @@ session_start();
                                     <i class="nc-icon nc-planet"></i>
                                 </a>
                                 <ul class="dropdown-menu">
-                                    <a class="dropdown-item" href="#">Create New Post</a>
-                                    <a class="dropdown-item" href="#">Manage Something</a>
+                                    <a class="dropdown-item" href="./product_reg.php">Register Product</a>
+                                    <a class="dropdown-item" href="./service_reg.php">Register Services</a>
                                     <a class="dropdown-item" href="#">Do Nothing</a>
                                     <a class="dropdown-item" href="#">Submit to live</a>
                                     <li class="divider"></li>

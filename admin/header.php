@@ -11,6 +11,7 @@ session_start();
     header("location: .././login.php");
   }
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -94,11 +95,23 @@ session_start();
                         <img src="assets/img/default-avatar.png" />
                     </div>
                     <div class="info ">
+                      <?php if (isset($_SESSION['success'])) : ?>
+                      <div class="error success" >
+                      	<h3>
+                          <?php
+                          	echo $_SESSION['success'];
+                          	unset($_SESSION['success']);
+                          ?>
                         <a data-toggle="collapse" class="collapsed">
                         <!--a data-toggle="collapse" href="#collapseExample" class="collapsed"-->
-                            <span>Aakash Singh
+                      <?php endif ?>
+
+                        <!-- logged in user information -->
+                        <?php  if (isset($_SESSION['username'])) : ?>
+                            <span><strong><?php echo $_SESSION['username']; ?></strong>
                                 <!--b class="caret"></b-->
                             </span>
+                            <?php endif ?>
                         </a>
                         <div class="collapse" id="collapseExample">
                             <ul class="nav">
@@ -192,7 +205,7 @@ session_start();
                             </ul>
                         </div>
                     </li>
-                    
+
                 </ul>
             </div>
         </div>

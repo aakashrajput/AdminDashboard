@@ -4,6 +4,6 @@ CREATE TABLE `spartanshub`.
    `pcategory` VARCHAR(50) NOT NULL ,
    `phead` VARCHAR(50) NOT NULL ,
    `doi` VARCHAR(20) NOT NULL ,
-   `pinfo` VARCHAR(100) NOT NULL ,
+   `pinfo` VARCHAR(500) NOT NULL ,
    `byName` VARCHAR(50) NOT NULL ,
     PRIMARY KEY (`id`)) ENGINE = InnoDB;

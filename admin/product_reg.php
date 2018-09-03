@@ -63,7 +63,15 @@ include "bluf_connection.php";
                                                 <div class="row">
                                                     <div class="col-md-12">
                                                         <div class="form-group">
-                                                            <label>Product Info.</label>
+                                                            <label>Short Product Info.</label>
+                                                            <textarea rows="4" cols="80" class="form-control" placeholder="Description about Product" name="pinfo" value=""></textarea>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <label>Product Info. in Detail</label>
                                                             <textarea rows="4" cols="80" class="form-control" placeholder="Description about Product" name="pinfo" value=""></textarea>
                                                         </div>
                                                     </div>
@@ -85,6 +93,7 @@ include "bluf_connection.php";
                 '$_POST[phead]',
                 '$_POST[doi]',
                 '$_POST[pinfo]',
+                '$_POST[pinfo2]',
                 '$_SESSION[username]'
                 )")
 

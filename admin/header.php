@@ -1,5 +1,5 @@
 <?php
-session_start(); 
+session_start();
 
   if (!isset($_SESSION['username'])) {
     $_SESSION['msg'] = "You must log in first";
@@ -64,7 +64,7 @@ session_start();
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-NKDMSK6');</script>
-   
+
     <!-- End Google Tag Manager -->
     </head>
 
@@ -134,14 +134,14 @@ session_start();
                     <li class="nav-item ">
                         <a class="nav-link" href="./carrer.php">
                             <i class="pe-7s-science"></i>
-                            <p>Carrer</p>
+                            <p>Projects</p>
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" data-toggle="collapse" href="#componentsExamples">
                             <i class="nc-icon nc-app"></i>
                             <p>
-                                Components
+                                Services
                                 <b class="caret"></b>
                             </p>
                         </a>
@@ -192,173 +192,7 @@ session_start();
                             </ul>
                         </div>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" data-toggle="collapse" href="#formsExamples">
-                            <i class="nc-icon nc-notes"></i>
-                            <p>
-                                Forms
-                                <b class="caret"></b>
-                            </p>
-                        </a>
-                        <div class="collapse " id="formsExamples">
-                            <ul class="nav">
-                                <li class="nav-item ">
-                                    <a class="nav-link" href="./forms/regular.html">
-                                        <span class="sidebar-mini">Rf</span>
-                                        <span class="sidebar-normal">Regular Forms</span>
-                                    </a>
-                                </li>
-                                <li class="nav-item ">
-                                    <a class="nav-link" href="./forms/extended.html">
-                                        <span class="sidebar-mini">Ef</span>
-                                        <span class="sidebar-normal">Extended Forms</span>
-                                    </a>
-                                </li>
-                                <li class="nav-item ">
-                                    <a class="nav-link" href="./forms/validation.html">
-                                        <span class="sidebar-mini">Vf</span>
-                                        <span class="sidebar-normal">Validation Forms</span>
-                                    </a>
-                                </li>
-                                <li class="nav-item ">
-                                    <a class="nav-link" href="./forms/wizard.html">
-                                        <span class="sidebar-mini">W</span>
-                                        <span class="sidebar-normal">Wizard</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" data-toggle="collapse" href="#tablesExamples">
-                            <i class="nc-icon nc-paper-2"></i>
-                            <p>
-                                Tables
-                                <b class="caret"></b>
-                            </p>
-                        </a>
-                        <div class="collapse " id="tablesExamples">
-                            <ul class="nav">
-                                <li class="nav-item ">
-                                    <a class="nav-link" href="./tables/regular.html">
-                                        <span class="sidebar-mini">RT</span>
-                                        <span class="sidebar-normal">Regular Tables</span>
-                                    </a>
-                                </li>
-                                <li class="nav-item ">
-                                    <a class="nav-link" href="./tables/extended.html">
-                                        <span class="sidebar-mini">ET</span>
-                                        <span class="sidebar-normal">Extended Tables</span>
-                                    </a>
-                                </li>
-                                <li class="nav-item ">
-                                    <a class="nav-link" href="./tables/bootstrap-table.html">
-                                        <span class="sidebar-mini">BT</span>
-                                        <span class="sidebar-normal">Bootstrap Table</span>
-                                    </a>
-                                </li>
-                                <li class="nav-item ">
-                                    <a class="nav-link" href="./tables/datatables.net.html">
-                                        <span class="sidebar-mini">DT</span>
-                                        <span class="sidebar-normal">DataTables.net</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" data-toggle="collapse" href="#mapsExamples">
-                            <i class="nc-icon nc-pin-3"></i>
-                            <p>
-                                Maps
-                                <b class="caret"></b>
-                            </p>
-                        </a>
-                        <div class="collapse " id="mapsExamples">
-                            <ul class="nav">
-                                <li class="nav-item ">
-                                    <a class="nav-link" href="./maps/google.html">
-                                        <span class="sidebar-mini">GM</span>
-                                        <span class="sidebar-normal">Google Maps</span>
-                                    </a>
-                                </li>
-                                <li class="nav-item ">
-                                    <a class="nav-link" href="./maps/vector.html">
-                                        <span class="sidebar-mini">VM</span>
-                                        <span class="sidebar-normal">Vector maps</span>
-                                    </a>
-                                </li>
-                                <li class="nav-item ">
-                                    <a class="nav-link" href="./maps/fullscreen.html">
-                                        <span class="sidebar-mini">FSM</span>
-                                        <span class="sidebar-normal">Full Screen Map</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="nav-item ">
-                        <a class="nav-link" href="./charts.html">
-                            <i class="nc-icon nc-chart-bar-32"></i>
-                            <p>Charts</p>
-                        </a>
-                    </li>
-                    <li class="nav-item ">
-                        <a class="nav-link" href="./calendar.html">
-                            <i class="nc-icon nc-single-copy-04"></i>
-                            <p>Calendar</p>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" data-toggle="collapse" href="#pagesExamples">
-                            <i class="nc-icon nc-puzzle-10"></i>
-                            <p>
-                                Pages
-                                <b class="caret"></b>
-                            </p>
-                        </a>
-                        <div class="collapse " id="pagesExamples">
-                            <ul class="nav">
-                                <li class="nav-item ">
-                                    <a class="nav-link" href="./pages/login.html">
-                                        <span class="sidebar-mini">LP</span>
-                                        <span class="sidebar-normal">Login Page</span>
-                                    </a>
-                                </li>
-                                <li class="nav-item ">
-                                    <a class="nav-link" href="./pages/register.html">
-                                        <span class="sidebar-mini">RP</span>
-                                        <span class="sidebar-normal">Register Page</span>
-                                    </a>
-                                </li>
-                                <li class="nav-item ">
-                                    <a class="nav-link" href="./pages/lock.html">
-                                        <span class="sidebar-mini">LSP</span>
-                                        <span class="sidebar-normal">Lock Screen Page</span>
-                                    </a>
-                                </li>
-                                <li class="nav-item  ">
-                                    <a class="nav-link" href="./pages/user.html">
-                                        <span class="sidebar-mini">UP</span>
-                                        <span class="sidebar-normal">User Page</span>
-                                    </a>
-                                </li>
-                                <li class="nav-item  ">
-                                    <a class="nav-link" href="#lbd">
-                                        <span class="sidebar-mini">MCS</span>
-                                        <span class="sidebar-normal">More coming soon...</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                
-                    <li class="active-pro">
-                    <a href="upgrade.php">
-                        <i class="pe-7s-rocket"></i>
-                        <p style="margin: 0;line-height: 30px;color:#fff;font-size: 12px;font-weight: 600;text-transform: uppercase;margin-left: 45px;">Upgrade to PRO</p>
-                    </a>
-                </li>
+                    
                 </ul>
             </div>
         </div>

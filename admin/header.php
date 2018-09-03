@@ -87,7 +87,7 @@ session_start();
                         Spartans Hub
                     </a-->
                     <a href="https://www.creative-tim.com" class="simple-text logo-normal">
-                        One Guide
+                        Spartans Hub
                     </a>
                 </div>
                 <div class="user">
@@ -95,20 +95,14 @@ session_start();
                         <img src="assets/img/default-avatar.png" />
                     </div>
                     <div class="info ">
-                      <?php if (isset($_SESSION['success'])) : ?>
-                      <div class="error success" >
-                      	<h3>
-                          <?php
-                          	echo $_SESSION['success'];
-                          	unset($_SESSION['success']);
-                          ?>
+
                         <a data-toggle="collapse" class="collapsed">
                         <!--a data-toggle="collapse" href="#collapseExample" class="collapsed"-->
-                      <?php endif ?>
+
 
                         <!-- logged in user information -->
                         <?php  if (isset($_SESSION['username'])) : ?>
-                            <span><strong><?php echo $_SESSION['username']; ?></strong>
+                            <span><b><?php echo $_SESSION['username']; ?></b>
                                 <!--b class="caret"></b-->
                             </span>
                             <?php endif ?>
@@ -144,68 +138,110 @@ session_start();
                             <p>Home</p>
                         </a>
                     </li>
-                    <li class="nav-item ">
-                        <a class="nav-link" href="./carrer.php">
-                            <i class="pe-7s-science"></i>
-                            <p>Projects</p>
-                        </a>
-                    </li>
                     <li class="nav-item">
                         <a class="nav-link" data-toggle="collapse" href="#componentsExamples">
-                            <i class="nc-icon nc-app"></i>
+                            <i class="pe-7s-science"></i>
                             <p>
-                                Services
+                                Products
                                 <b class="caret"></b>
                             </p>
                         </a>
                         <div class="collapse " id="componentsExamples">
                             <ul class="nav">
+                              <li class="nav-item ">
+                                  <a class="nav-link" href="./components/panels.html">
+                                      <span class="sidebar-mini">A</span>
+                                      <span class="sidebar-normal">Android</span>
+                                  </a>
+                              </li>
                                 <li class="nav-item ">
                                     <a class="nav-link" href="./components/buttons.html">
-                                        <span class="sidebar-mini">B</span>
-                                        <span class="sidebar-normal">Buttons</span>
+                                        <span class="sidebar-mini">AI</span>
+                                        <span class="sidebar-normal">Artificial Intelligence</span>
                                     </a>
                                 </li>
                                 <li class="nav-item ">
                                     <a class="nav-link" href="./components/grid.html">
-                                        <span class="sidebar-mini">GS</span>
-                                        <span class="sidebar-normal">Grid System</span>
+                                        <span class="sidebar-mini">ML</span>
+                                        <span class="sidebar-normal">Machine Learning</span>
                                     </a>
                                 </li>
                                 <li class="nav-item ">
                                     <a class="nav-link" href="./components/panels.html">
-                                        <span class="sidebar-mini">P</span>
-                                        <span class="sidebar-normal">Panels</span>
+                                        <span class="sidebar-mini">H</span>
+                                        <span class="sidebar-normal">Home</span>
                                     </a>
                                 </li>
                                 <li class="nav-item ">
                                     <a class="nav-link" href="./components/sweet-alert.html">
-                                        <span class="sidebar-mini">SA</span>
-                                        <span class="sidebar-normal">Sweet Alert</span>
+                                        <span class="sidebar-mini">IOT</span>
+                                        <span class="sidebar-normal">Internet Of Things</span>
                                     </a>
                                 </li>
                                 <li class="nav-item ">
                                     <a class="nav-link" href="./components/notifications.html">
-                                        <span class="sidebar-mini">N</span>
-                                        <span class="sidebar-normal">Notifications</span>
+                                        <span class="sidebar-mini">P</span>
+                                        <span class="sidebar-normal">Plugins</span>
                                     </a>
                                 </li>
                                 <li class="nav-item ">
                                     <a class="nav-link" href="./components/icons.html">
-                                        <span class="sidebar-mini">I</span>
-                                        <span class="sidebar-normal">Icons</span>
+                                        <span class="sidebar-mini">S</span>
+                                        <span class="sidebar-normal">Security</span>
                                     </a>
                                 </li>
                                 <li class="nav-item ">
                                     <a class="nav-link" href="./components/typography.html">
-                                        <span class="sidebar-mini">T</span>
-                                        <span class="sidebar-normal">Typography</span>
+                                        <span class="sidebar-mini">Web</span>
+                                        <span class="sidebar-normal">Web Development</span>
                                     </a>
                                 </li>
                             </ul>
                         </div>
                     </li>
-
+                    <li class="nav-item">
+                          <a class="nav-link" data-toggle="collapse" href="#formsExamples">
+                              <i class="nc-icon nc-notes"></i>
+                              <p>
+                                  Services
+                                  <b class="caret"></b>
+                              </p>
+                          </a>
+                          <div class="collapse " id="formsExamples">
+                              <ul class="nav">
+                                <li class="nav-item ">
+                                    <a class="nav-link" href="./forms/extended.html">
+                                        <span class="sidebar-mini">G</span>
+                                        <span class="sidebar-normal">Graphic Design</span>
+                                    </a>
+                                </li>
+                                  <li class="nav-item ">
+                                      <a class="nav-link" href="./forms/regular.html">
+                                          <span class="sidebar-mini">H</span>
+                                          <span class="sidebar-normal">Hosting</span>
+                                      </a>
+                                  </li>
+                                  <li class="nav-item ">
+                                      <a class="nav-link" href="./forms/wizard.html">
+                                          <span class="sidebar-mini">S</span>
+                                          <span class="sidebar-normal">Systems</span>
+                                      </a>
+                                  </li>
+                                  <li class="nav-item ">
+                                      <a class="nav-link" href="./forms/validation.html">
+                                          <span class="sidebar-mini">UI</span>
+                                          <span class="sidebar-normal">User Interface Design</span>
+                                      </a>
+                                  </li>
+                                  <li class="nav-item ">
+                                      <a class="nav-link" href="./forms/validation.html">
+                                          <span class="sidebar-mini">W</span>
+                                          <span class="sidebar-normal">Web Design</span>
+                                      </a>
+                                  </li>
+                              </ul>
+                          </div>
+                      </li>
                 </ul>
             </div>
         </div>
@@ -220,7 +256,7 @@ session_start();
                                 <i class="fa fa-navicon visible-on-sidebar-mini"></i>
                             </button>
                         </div>
-                        <a class="navbar-brand" href="#pablo"> One Guide</a>
+                        <a class="navbar-brand" href="#pablo">Spartans Hub</a>
                     </div>
                     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-bar burger-lines"></span>
@@ -282,7 +318,7 @@ session_start();
                                     <a class="dropdown-item" href="#">
                                         <i class="nc-icon nc-lock-circle-open"></i> Lock Screen
                                     </a>
-                                    <a href="#" class="dropdown-item text-danger">
+                                    <a href="index.php?logout='1'" class="dropdown-item text-danger">
                                         <i class="nc-icon nc-button-power"></i> Log out
                                     </a>
                                 </div>

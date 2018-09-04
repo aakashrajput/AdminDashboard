@@ -13,7 +13,7 @@ include "bluf_connection.php"
                               <div class="card-body table-full-width table-responsive">
                                   <table class="table table-hover">
                                     <?php
-                                    $res = mysqli_query($link,"select * from products");
+                                    $res = mysqli_query($link,"select * from products ORDER BY id DESC LIMIT 4");
                                       echo "<thead>";
                                           echo "<th>";echo "ID";echo "</th>";
                                           echo "<th>";echo "Name";echo "</th>";

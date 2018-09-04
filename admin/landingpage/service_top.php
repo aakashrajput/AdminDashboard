@@ -6,65 +6,33 @@
                                 </div>
                                 <div class="card-body table-full-width table-responsive">
                                     <table class="table table-hover">
-                                        <thead>
-                                            <th>ID</th>
-                                            <th>Name</th>
-                                            <th>Salary</th>
-                                            <th>Country</th>
-                                            <th>City</th>
-                                        </thead>
-                                        <tbody>
-                                            <tr class="success">
-                                                <td>1</td>
-                                                <td>Dakota Rice (Success)</td>
-                                                <td>$36,738</td>
-                                                <td>Niger</td>
-                                                <td>Oud-Turnhout</td>
-                                            </tr>
-                                            <tr>
-                                                <td>2</td>
-                                                <td>Minerva Hooper</td>
-                                                <td>$23,789</td>
-                                                <td>Curaçao</td>
-                                                <td>Sinaai-Waas</td>
-                                            </tr>
-                                            <tr class="info">
-                                                <td>3</td>
-                                                <td>Sage Rodriguez (Info)</td>
-                                                <td>$56,142</td>
-                                                <td>Netherlands</td>
-                                                <td>Baileux</td>
-                                            </tr>
-                                            <tr>
-                                                <td>4</td>
-                                                <td>Philip Chaney</td>
-                                                <td>$38,735</td>
-                                                <td>Korea, South</td>
-                                                <td>Overland Park</td>
-                                            </tr>
-                                            <tr class="danger">
-                                                <td>5</td>
-                                                <td>Doris Greene (Danger)</td>
-                                                <td>$63,542</td>
-                                                <td>Malawi</td>
-                                                <td>Feldkirchen in Kärnten</td>
-                                            </tr>
-                                            <tr>
-                                                <td>6</td>
-                                                <td>Mason Porter</td>
-                                                <td>$78,615</td>
-                                                <td>Chile</td>
-                                                <td>Gloucester</td>
-                                            </tr>
-                                            <tr class="warning">
-                                                <td>7</td>
-                                                <td>Mike Chaney (Warning)</td>
-                                                <td>$38,735</td>
-                                                <td>Romania</td>
-                                                <td>Bucharest</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
+                                      <?php
+                                      $res = mysqli_query($link,"select * from products ORDER BY id DESC LIMIT 4");
+                                        echo "<thead>";
+                                            echo "<th>";echo "ID";echo "</th>";
+                                            echo "<th>";echo "Name";echo "</th>";
+                                            echo "<th>";echo "Category";echo "</th>";
+                                            echo "<th>";echo "Project Head";echo "</th>";
+                                            echo "<th>";echo "Date-Of-Submission";echo "</th>";
+                                            echo "<th>";echo "Project Info";echo "</th>";
+                                            echo "<th>";echo "Added By";echo "</th>";
+                                        echo "</thead>";
+                                        while($row=mysqli_fetch_array($res))
+                                  {
+                                        echo "<tbody>";
+                                            echo "<tr>";
+                                                echo"<td>";echo $row["id"]; echo"</td>";
+                                                echo"<td>";echo $row["pname"]; echo"</td>";
+                                                echo"<td>";echo $row["pcategory"]; echo"</td>";
+                                                echo"<td>";echo $row["phead"]; echo"</td>";
+                                                echo"<td>";echo $row["doi"]; echo"</td>";
+                                                echo"<td>";echo $row["pinfo"]; echo"</td>";
+                                                echo"<td>";echo $row["byName"]; echo"</td>";
+                                            echo "</tr>";
+                                        echo "</tbody>";
+                                  }
+                                    echo "</table>";
+                                      ?>
                                 </div>
                             </div>
                         </div>

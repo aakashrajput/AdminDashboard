@@ -274,8 +274,8 @@ session_start();
                                 <ul class="dropdown-menu">
                                     <a class="dropdown-item" href="./product_reg.php">Register Product</a>
                                     <a class="dropdown-item" href="./service_reg.php">Register Services</a>
-                                    <a class="dropdown-item" href="#">Do Nothing</a>
-                                    <a class="dropdown-item" href="#">Submit to live</a>
+                                    <a class="dropdown-item" href="./employee_reg.php">Register Employee</a>
+                                    <a class="dropdown-item" href="./client_reg.php">Register Client</a>
                                     <li class="divider"></li>
                                     <a class="dropdown-item" href="#">Another action</a>
                                 </ul>

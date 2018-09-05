@@ -1,5 +1,5 @@
 CREATE TABLE `spartanshub`.
-   `products` ( `id` INT NOT NULL AUTO_INCREMENT ,
+   `products_reg` ( `id` INT NOT NULL AUTO_INCREMENT ,
    `pname` VARCHAR(50) NOT NULL ,
    `pcategory` VARCHAR(50) NOT NULL ,
    `phead` VARCHAR(50) NOT NULL ,

@@ -1,137 +1,106 @@
-<!doctype html>
+<?php include('server.php') ?>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="utf-8" />
-	<link rel="icon" type="image/png" href="assets/img/favicon.ico">
-
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-
-	<title>One Guide</title>
-
-	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
-    <meta name="viewport" content="width=device-width" />
-
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="assets/css/light-bootstrap-dashboard.css?v=1.4.0" rel="stylesheet"/>
-    <link href="assets/css/demo.css" rel="stylesheet" />
-
-    <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/google/code-prettify/master/loader/prettify.css">
-    <link href="css/index.css" rel="stylesheet" />
-
-    <!--     Fonts and icons     -->
-    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
-    <link href='https://fonts.googleapis.com/css?family=Grand+Hotel|Open+Sans:400,300' rel='stylesheet' type='text/css'>
-    <link href="assets/css/pe-icon-7-stroke.css" rel="stylesheet" />
+	<title>One Guide | Login</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+<!--===============================================================================================-->
 </head>
-
 <body>
+	
+	
+	<div class="container-login100" style="background-image: url('images/bg-01.jpg');">
+		<div class="wrap-login100 p-l-55 p-r-55 p-t-80 p-b-30">
+			<form class="login100-form validate-form" method="post" action="login.php">
+				<span class="login100-form-title p-b-37">
+					Sign In
+				</span>
 
+				<div class="wrap-input100 validate-input m-b-20" data-validate="Enter username or email">
+					<input class="input100" type="text" name="username" placeholder="username or email">
+					<span class="focus-input100"></span>
+				</div>
 
+				<div class="wrap-input100 validate-input m-b-25" data-validate = "Enter password">
+					<input class="input100" type="password" name="password" placeholder="password">
+					<span class="focus-input100"></span>
+				</div>
 
-<div class="header-wrapper">
-        <nav class="navbar navbar-transparent navbar-fixed-top" role="navigation" color-on-scroll>
-          <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-              <button id="menu-toggle" type="button" class="navbar-toggle">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar bar1"></span>
-                <span class="icon-bar bar2"></span>
-                <span class="icon-bar bar3"></span>
-              </button>
-              <a href="http://www.creative-tim.com">
-                   <div class="logo-container">
-                        <div class="logo">
-                            <img src="assets/img/logo.jpeg" alt="Spartans Hub Logo">
-                        </div>
-                        <div class="brand">
-                            SpartansHub
-                        </div>
-                    </div>
-              </a>
-            </div>
+				<div class="container-login100-form-btn">
+					<button class="login100-form-btn" name="login_user">
+						Sign In
+					</button>
+				</div>
 
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse">
-              <ul  class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href='https://github.com/creativetimofficial/light-bootstrap-dashboard/issues' target="_blank" id="issueButton" class="btn btn-simple btn-neutral">Have an issue?</a>
-                    </li>
-               </ul>
+				<div class="text-center p-t-57 p-b-20">
+					<span class="txt1">
+						Or login with
+					</span>
+				</div>
 
-            </div><!-- /.navbar-collapse -->
-          </div><!-- /.container-fluid -->
-        </nav>
-
-        <div class="header" style="background-image: url('assets/img/full-screen-image-3.jpg');
-">
-            <div class="filter"></div>
-            <div class="title-container text-center">
-                    <h1>One Guide</h1>
-                    <h3 class="category">Meet Yourself</h3>
-                    <h4 class="description text-center">Only OneGuide to Bleach your carrier in professional way.<br>Enlighting to the best possible path exclusively for you.</h4>
-                    <a href="login.php" class="btn btn-neutral btn-lg btn-round btn-fill" target="_top">Login</a>
-            </div>
-        </div>
-</div>
-
-
-
-
-<footer class="footer footer-demo">
-	<div class="container">
-		<nav class="pull-left">
-			<ul>
-				<li>
-					<a href="http://www.creative-tim.com/product/light-bootstrap-dashboard">
-						Light Bootstrap Dashboard
+				<div class="flex-c p-b-112">
+					<a href="#" class="login100-social-item">
+						<i class="fa fa-facebook-f"></i>
 					</a>
-				</li>
-				<li>
-					<a href="http://www.creative-tim.com">
-						Creative Tim
+
+					<a href="#" class="login100-social-item">
+						<img src="images/icons/icon-google.png" alt="GOOGLE">
 					</a>
-				</li>
-				<li>
-					<a href="http://blog.creative-tim.com">
-					   Blog
+				</div>
+
+				<div class="text-center">
+					<a href="register.php" class="txt2 hov1">
+						Sign Up
 					</a>
-				</li>
-			</ul>
-		</nav>
-		<div class="social-area pull-right">
-			<a class="btn btn-social btn-twitter btn-simple" href="https://twitter.com/CreativeTim">
-				<i class="fa fa-twitter"></i>
-			</a>
-			<a class="btn btn-social btn-facebook btn-simple" href="https://www.facebook.com/CreativeTim">
-				<i class="fa fa-facebook-square"></i>
-			</a>
-			<a class="btn btn-social btn-google btn-simple" href="https://plus.google.com/+CreativetimPage">
-				<i class="fa fa-google-plus"></i>
-			</a>
-		</div>
-		<div class="copyright">
-			&copy; <script>document.write(new Date().getFullYear())</script> Spartans Hub, One Guide all for students.
+				</div>
+			</form>
+
+			
 		</div>
 	</div>
-</footer>
+	
+	
+
+	<div id="dropDownSelect1"></div>
+	
+<!--===============================================================================================-->
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/animsition/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/daterangepicker/moment.min.js"></script>
+	<script src="vendor/daterangepicker/daterangepicker.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/countdowntime/countdowntime.js"></script>
+<!--===============================================================================================-->
+	<script src="js/main.js"></script>
+
 </body>
-	<!--   Core JS Files   -->
-	<script src="assets/js/jquery.3.2.1.min.js" type="text/javascript"></script>
-	<script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
-
-	<!--  Charts Plugin -->
-	<script src="assets/js/chartist.min.js"></script>
-
-	<!--  Notifications Plugin    -->
-	<script src="assets/js/bootstrap-notify.js"></script>
-
-	<!--  Google Maps Plugin    -->
-	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
-
-	<!-- Light Bootstrap Table Core javascript and methods for Demo purpose -->
-	<script src="assets/js/light-bootstrap-dashboard.js?v=1.4.0"></script>
-
-	<!-- Light Bootstrap Table DEMO methods, don't include it in your project! -->
-	<script src="assets/js/demo.js"></script>
 </html>

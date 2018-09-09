@@ -12,7 +12,7 @@ include "bluf_connection.php"
                                       <?php
                                       $res = mysqli_query($link,"select * from services_reg ORDER BY id DESC LIMIT 4");
                                         echo "<thead>";
-                                            echo "<th>";echo "Name";echo "</th>";
+                                            echo "<th>";echo "Service Name";echo "</th>";
                                             echo "<th>";echo "Client Name";echo "</th>";
                                             echo "<th>";echo "Domain";echo "</th>";
                                             echo "<th>";echo "Service Head";echo "</th>";

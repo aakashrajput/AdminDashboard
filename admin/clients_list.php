@@ -1,7 +1,10 @@
 <?php
+include "header.php";
 include "bluf_connection.php"
 ?>
-
+<div class="content">
+               <div class="container-fluid">
+                   <div class="row">
 
                      <div class="col-md-12">
                           <div class="card regular-table-with-color">
@@ -12,9 +15,9 @@ include "bluf_connection.php"
                               <div class="card-body table-full-width table-responsive">
                                   <table class="table table-hover">
                                     <?php
-                                    $res = mysqli_query($link,"select * from client_reg ORDER BY id DESC LIMIT 4");
+                                    $res = mysqli_query($link,"select * from client_reg");
                                       echo "<thead>";
-                                          echo "<th>";echo "Client Name";echo "</th>";
+                                          echo "<th>";echo "Name";echo "</th>";
                                           echo "<th>";echo "Email ID";echo "</th>";
                                           echo "<th>";echo "Phone No";echo "</th>";
                                           echo "<th>";echo "Total Services";echo "</th>";
@@ -37,3 +40,8 @@ include "bluf_connection.php"
                               </div>
                           </div>
                       </div>
+
+
+<?php
+   include "footer.php";
+?>

@@ -29,7 +29,7 @@ include "bluf_connection.php"
                                <div class="card-footer ">
                                    <hr>
                                    <div class="stats">
-                                       <a href=".././emp_list.php"><i class="fa fa-list"></i> View Now</a>
+                                       <a href="././employees_list.php"><i class="fa fa-list"></i> View Now</a>
                                    </div>
                                </div>
                            </div>
@@ -58,7 +58,7 @@ include "bluf_connection.php"
                                <div class="card-footer ">
                                    <hr>
                                    <div class="stats">
-                                       <a href=".././emp_list.php"><i class="fa fa-list"></i> View Now</a>
+                                       <a href="././clients_list.php"><i class="fa fa-list"></i> View Now</a>
                                    </div>
                                </div>
                            </div>
@@ -87,7 +87,7 @@ include "bluf_connection.php"
                                <div class="card-footer ">
                                    <hr>
                                    <div class="stats">
-                                       <a href=".././emp_list.php"><i class="fa fa-list"></i> View Now</a>
+                                       <a href="././products_list.php"><i class="fa fa-list"></i> View Now</a>
                                    </div>
                                </div>
                            </div>
@@ -116,7 +116,7 @@ include "bluf_connection.php"
                                <div class="card-footer ">
                                    <hr>
                                    <div class="stats">
-                                       <a href=".././emp_list.php"><i class="fa fa-list"></i> View Now</a>
+                                       <a href="././services_list.php"><i class="fa fa-list"></i> View Now</a>
                                    </div>
                                </div>
                            </div>

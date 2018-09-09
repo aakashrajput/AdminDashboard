@@ -13,7 +13,7 @@ include "bluf_connection.php"
                                     <?php
                                     $res = mysqli_query($link,"select * from employee_reg ORDER BY id DESC LIMIT 4");
                                       echo "<thead>";
-                                          echo "<th>";echo "Name";echo "</th>";
+                                          echo "<th>";echo "Employee Name";echo "</th>";
                                           echo "<th>";echo "Email ID";echo "</th>";
                                           echo "<th>";echo "Phone No";echo "</th>";
                                           echo "<th>";echo "Work Domain";echo "</th>";

@@ -277,10 +277,10 @@ session_start();
                                     <a class="dropdown-item" href="./employee_reg.php">Register Employee</a>
                                     <a class="dropdown-item" href="./client_reg.php">Register Client</a>
                                     <li class="divider"></li>
-                                    <a class="dropdown-item" href="#">Another action</a>
+                                    <!--a class="dropdown-item" href="#">Another action</a-->
                                 </ul>
                             </li>
-                            <li class="dropdown nav-item">
+                            <!--li class="dropdown nav-item">
                                 <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
                                     <i class="nc-icon nc-bell-55"></i>
                                     <span class="notification">5</span>
@@ -293,7 +293,7 @@ session_start();
                                     <a class="dropdown-item" href="#">Notification 4</a>
                                     <a class="dropdown-item" href="#">Notification 5</a>
                                 </ul>
-                            </li>
+                            </li-->
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="https://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     <i class="nc-icon nc-bullet-list-67"></i>

@@ -1311,7 +1311,7 @@ demo = {
 
         $.notify({
             icon: "nc-icon nc-app",
-            message: "Welcome to <b>One Guide</b> - the only guide to bleach your carrier."
+            message: "Welcome Back <b> Admin</b>."
 
         }, {
             type: type[color],

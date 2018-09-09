@@ -299,7 +299,7 @@ session_start();
                                     <i class="nc-icon nc-bullet-list-67"></i>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-                                    <a class="dropdown-item" href="#">
+                                    <!--a class="dropdown-item" href="#">
                                         <i class="nc-icon nc-email-85"></i> Messages
                                     </a>
                                     <a class="dropdown-item" href="#">
@@ -311,7 +311,7 @@ session_start();
                                     <div class="divider"></div>
                                     <a class="dropdown-item" href="#">
                                         <i class="nc-icon nc-lock-circle-open"></i> Lock Screen
-                                    </a>
+                                    </a-->
                                     <a href="index.php?logout='1'" class="dropdown-item text-danger">
                                         <i class="nc-icon nc-button-power"></i> Log out
                                     </a>

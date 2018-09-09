@@ -1,3 +1,6 @@
+<?php
+include "bluf_connection.php"
+?>
 <div class="col-md-12">
                             <div class="card regular-table-with-color">
                                 <div class="card-header ">
@@ -7,12 +10,12 @@
                                 <div class="card-body table-full-width table-responsive">
                                     <table class="table table-hover">
                                       <?php
-                                      $res = mysqli_query($link,"select * from products ORDER BY id DESC LIMIT 4");
+                                      $res = mysqli_query($link,"select * from services_reg ORDER BY id DESC LIMIT 4");
                                         echo "<thead>";
-                                            echo "<th>";echo "ID";echo "</th>";
                                             echo "<th>";echo "Name";echo "</th>";
-                                            echo "<th>";echo "Category";echo "</th>";
-                                            echo "<th>";echo "Project Head";echo "</th>";
+                                            echo "<th>";echo "Client Name";echo "</th>";
+                                            echo "<th>";echo "Domain";echo "</th>";
+                                            echo "<th>";echo "Service Head";echo "</th>";
                                             echo "<th>";echo "Date-Of-Submission";echo "</th>";
                                             echo "<th>";echo "Project Info";echo "</th>";
                                             echo "<th>";echo "Added By";echo "</th>";
@@ -21,12 +24,12 @@
                                   {
                                         echo "<tbody>";
                                             echo "<tr>";
-                                                echo"<td>";echo $row["id"]; echo"</td>";
-                                                echo"<td>";echo $row["pname"]; echo"</td>";
-                                                echo"<td>";echo $row["pcategory"]; echo"</td>";
-                                                echo"<td>";echo $row["phead"]; echo"</td>";
+                                                echo"<td style='color:purple;'>";echo $row["sname"]; echo"</td>";
+                                                echo"<td style='color:red;'>";echo $row["scname"]; echo"</td>";
+                                                echo"<td>";echo $row["scategory"]; echo"</td>";
+                                                echo"<td>";echo $row["shead"]; echo"</td>";
                                                 echo"<td>";echo $row["doi"]; echo"</td>";
-                                                echo"<td>";echo $row["pinfo"]; echo"</td>";
+                                                echo"<td>";echo $row["sinfo"]; echo"</td>";
                                                 echo"<td>";echo $row["byName"]; echo"</td>";
                                             echo "</tr>";
                                         echo "</tbody>";

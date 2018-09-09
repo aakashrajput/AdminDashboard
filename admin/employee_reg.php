@@ -65,10 +65,10 @@ include "bluf_connection.php";
                                                         </div>
                                                     </div>
                                                     <div class="col-md-6 pr-1">
-                                                        <div class="form-group">
-                                                            <label>Upload CV</label>
-                                                            <input type="file" class="form-control" name="emp_cv" placeholder="Upload your CV" value="">
-                                                        </div>
+                                                      <div class="form-group">
+                                                          <label>Skills</label>
+                                                          <input type="text" class="form-control" name="emp_skills" placeholder="Type in Employee Skills" value="">
+                                                      </div>
                                                     </div>
                                                     <div class="col-md-6 pr-1">
                                                         <div class="form-group">
@@ -107,29 +107,30 @@ include "bluf_connection.php";
                                 $emp_email = $_POST['emp_email'];
                                 $emp_state = $_POST['emp_state'];
                                 $emp_contact = $_POST['emp_contact'];
-                                $emp_cv = $_FILES['emp_cv']['name'];
+                                $emp_skills = $_POST['emp_skills'];
                                 $emp_img = $_FILES['emp_img']['name'];
                                 $emp_dor = $_POST['emp_dor'];
                                 $emp_about = $_POST['emp_about'];
                                 $size = $_FILES['emp_img']['size'];
                                 $type = $_FILES['emp_img']['type'];
-                                //$tmp_name = $_FILES['emp_img']['tmp_name'];
+                                $tmp_name = $_FILES['emp_img']['tmp_name'];
+                                $username = $_SESSION['username'];
                                 //$cv_tmp_name = $_FILES['emp_cv']['tmp_name'];
                                 }
-                                $location = "uploads/";
+                                $location = "emp_uploads/";
                                 //$cv_location = "cv_uploads/";
                                 $maxsize= 10000000;
                                 $types = array('image/jpeg', 'image/png', 'pdf', 'doc', 'docx');
-                                if (isset($emp_img) && isset($emp_cv) &!empty($emp_cv) &!empty($emp_img)){
+                                //$cv_types = array('pdf', 'doc', 'docx');
+                                if (isset($emp_img) &!empty($emp_img)){
                                     if(in_array($_FILES['emp_img']['type'], $types) && $size <= $maxsize) {
                                       if(move_uploaded_file($tmp_name, $location.$emp_img)) {
-
-                                         $sql= "INSERT INTO `employee_reg` (emp_name, emp_domain, emp_email, emp_state, emp_contact, emp_cv, emp_img, emp_dor, emp_about, location) VALUES ('$emp_name','$emp_domain','$emp_email','$emp_state','$emp_contact', '$emp_cv', '$emp_img','$emp_dor', '$emp_about', '$location$emp_img')";
+                                         $sql= "INSERT INTO `employee_reg` (emp_name, emp_domain, emp_email, emp_state, emp_contact, emp_skills, emp_img, emp_dor, emp_about, username, location) VALUES ('$emp_name','$emp_domain','$emp_email','$emp_state','$emp_contact', '$emp_skills', '$emp_img','$emp_dor', '$emp_about', '$username', '$location$emp_img')";
                                         $res = mysqli_query($link, $sql);
                                         if($res) {
                                           ?>
                                           <div class="alert alert-success col-lg-12 col-lg-push-0">
-                                              Product Added successfully
+                                              Employee Added successfully
                                           </div>
                                           <?php
 

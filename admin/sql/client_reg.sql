@@ -7,8 +7,9 @@ CREATE TABLE `spartanshub`.
    `cli_state` VARCHAR(20) NOT NULL ,
    `cli_services` VARCHAR(20) NOT NULL ,
    `cli_contact` VARCHAR(20) NOT NULL ,
-   `cli_agr` VARCHAR(50) NOT NULL ,
    `cli_img` VARCHAR(50) NOT NULL ,
    `cli_dor` VARCHAR(50) NOT NULL ,
    `cli_about` VARCHAR(500) NOT NULL ,
+   `username` VARCHAR(500) NOT NULL ,
+   `location` VARCHAR(500) NOT NULL ,
     PRIMARY KEY (`id`)) ENGINE = InnoDB;

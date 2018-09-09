@@ -9,4 +9,6 @@ CREATE TABLE `spartanshub`.
    `emp_img` VARCHAR(50) NOT NULL ,
    `emp_dor` VARCHAR(50) NOT NULL ,
    `emp_about` VARCHAR(500) NOT NULL ,
+   `username` VARCHAR(500) NOT NULL ,
+   `location` VARCHAR(500) NOT NULL ,
     PRIMARY KEY (`id`)) ENGINE = InnoDB;

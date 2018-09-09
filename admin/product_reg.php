@@ -72,7 +72,7 @@ include "bluf_connection.php";
                                                     <div class="col-md-12">
                                                         <div class="form-group">
                                                             <label>Product Info. in Detail</label>
-                                                            <textarea rows="4" cols="80" class="form-control" placeholder="Description about Product" name="project_info" value=""></textarea>
+                                                            <textarea rows="4" cols="80" class="form-control" placeholder="Description about Product" name="product_info" value=""></textarea>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -93,7 +93,7 @@ include "bluf_connection.php";
                 '$_POST[phead]',
                 '$_POST[doi]',
                 '$_POST[pinfo]',
-                '$_POST[project_info]',
+                '$_POST[product_info]',
                 '$_SESSION[username]'
                 )")
 

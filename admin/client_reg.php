@@ -8,7 +8,7 @@ include "bluf_connection.php";
             <div class="container">
                             <div class="row">
                                 <div class="col-md-8 col-sm-6">
-                                    <form class="form" name="form1" action="" method="post">
+                                    <form class="form" name="form1" action="" method="POST" enctype="multipart/form-data">
                                         <div class="card ">
                                             <div class="card-header ">
                                                 <div class="card-header">
@@ -72,12 +72,6 @@ include "bluf_connection.php";
                                                     </div>
                                                     <div class="col-md-6 pr-1">
                                                         <div class="form-group">
-                                                            <label>Aggrement</label>
-                                                            <input type="file" class="form-control" name="cli_agr" placeholder="Contact No" value="">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-6 pr-1">
-                                                        <div class="form-group">
                                                             <label>Upload Client Photo</label>
                                                             <input type="file" class="form-control" name="cli_img" placeholder="Contact No" value="">
                                                         </div>
@@ -106,33 +100,53 @@ include "bluf_connection.php";
                                     </form>
                                 </div>
                                 <?php
-            if(isset($_POST["submit"]))
-            {
-                mysqli_query($link,"insert into employee_reg
-                values(
-                '',
-                '$_POST[pname]',
-                '$_POST[pcategory]',
-                '$_POST[phead]',
-                '$_POST[doi]',
-                '$_POST[pinfo]',
-                '$_POST[project_info]',
-                '$_SESSION[username]'
-                )")
 
+                                if (isset($_FILES) & !empty($_FILES)) {
+                                $cli_field = $_POST['cli_field'];
+                                $cli_name = $_POST['cli_name'];
+                                $cli_domain = $_POST['cli_domain'];
+                                $cli_email = $_POST['cli_email'];
+                                $cli_state = $_POST['cli_state'];
+                                $cli_services = $_POST['cli_services'];
+                                $cli_contact = $_POST['cli_contact'];
+                                $cli_img = $_FILES['cli_img']['name'];
+                                $cli_dor = $_POST['cli_dor'];
+                                $cli_about = $_POST['cli_about'];
+                                $size = $_FILES['cli_img']['size'];
+                                $type = $_FILES['cli_img']['type'];
+                                $username = $_SESSION['username'];
+                                $tmp_name = $_FILES['cli_img']['tmp_name'];
+                                }
+                                $location = "cli_uploads/";
+                                $maxsize= 10000000;
+                                $types = array('image/jpeg', 'image/png', 'pdf', 'doc', 'docx');
+                                if (isset($cli_img) &!empty($cli_img)){
+                                    if(in_array($_FILES['cli_img']['type'], $types) && $size <= $maxsize) {
+                                      if(move_uploaded_file($tmp_name, $location.$cli_img)) {
+                                        $sql= "INSERT INTO `client_reg` (cli_field, cli_name, cli_domain, cli_email, cli_state, cli_services, cli_contact, cli_img, cli_dor, cli_about, username,  location) VALUES ('$cli_field','$cli_name','$cli_domain','$cli_email','$cli_state', '$cli_services', '$cli_contact', '$cli_img', '$cli_dor', '$cli_about', '$username', '$location$cli_img')";
+                                        $res = mysqli_query($link, $sql);
+                                        if($res) {
+                                          ?>
+                                          <div class="alert alert-success col-lg-12 col-lg-push-0">
+                                            Client Added successfully
+                                          </div>
+                                          <?php
+
+                                        }
+
+                                      }
+                                      else {
+                                        echo "Failed to Upload";
+                                      }
+                                    }
+                                    else{
+                                      echo "File Should be jpeg image only & 100 kb in size";
+                                    }
+
+                                }
 
             ?>
 
-            <div class="alert alert-success col-lg-12 col-lg-push-0">
-                Product Added successfully
-            </div>
-
-
-            <?php
-
-            }
-
-            ?>
 <?php
 include "footer.php"
 ?>

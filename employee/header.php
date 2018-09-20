@@ -1,14 +1,14 @@
 <?php
 session_start();
 
-  if (!isset($_SESSION['username'])) {
+  if (!isset($_SESSION['emp_name'])) {
     $_SESSION['msg'] = "You must log in first";
-    header('location: .././index.php');
+    header('location: .././emp_login.php');
   }
   if (isset($_GET['logout'])) {
     session_destroy();
-    unset($_SESSION['username']);
-    header("location: .././index.php");
+    unset($_SESSION['emp_name']);
+    header("location: .././emp_login.php");
   }
 ?>
 
@@ -101,8 +101,8 @@ session_start();
 
 
                         <!-- logged in user information -->
-                        <?php  if (isset($_SESSION['username'])) : ?>
-                            <span><b><?php echo $_SESSION['username']; ?></b>
+                        <?php  if (isset($_SESSION['emp_name'])) : ?>
+                            <span><b><?php echo $_SESSION['emp_name']; ?></b>
                                 <!--b class="caret"></b-->
                             </span>
                             <?php endif ?>

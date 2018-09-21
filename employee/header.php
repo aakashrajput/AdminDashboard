@@ -138,7 +138,13 @@ session_start();
                             <p>Home</p>
                         </a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item ">
+                        <a class="nav-link" href="./live_projects.php">
+                            <i class="pe-7s-science"></i>
+                            <p>On Going Projects</p>
+                        </a>
+                    </li>
+                    <!--li class="nav-item">
                         <a class="nav-link" data-toggle="collapse" href="#componentsExamples">
                             <i class="pe-7s-science"></i>
                             <p>
@@ -192,8 +198,8 @@ session_start();
                                 </li>
                             </ul>
                         </div>
-                    </li>
-                    <li class="nav-item">
+                    </li-->
+                    <!--li class="nav-item">
                           <a class="nav-link" data-toggle="collapse" href="#formsExamples">
                               <i class="nc-icon nc-notes"></i>
                               <p>
@@ -235,7 +241,7 @@ session_start();
                                   </li>
                               </ul>
                           </div>
-                      </li>
+                      </li-->
                 </ul>
             </div>
         </div>
@@ -272,11 +278,9 @@ session_start();
                                     <i class="nc-icon nc-planet"></i>
                                 </a>
                                 <ul class="dropdown-menu">
-                                    <a class="dropdown-item" href="./product_reg.php">Register Product</a>
-                                    <a class="dropdown-item" href="./service_reg.php">Register Services</a>
-                                    <a class="dropdown-item" href="./employee_reg.php">Register Employee</a>
-                                    <a class="dropdown-item" href="./client_reg.php">Register Client</a>
-                                    <li class="divider"></li>
+                                    <a class="dropdown-item" href="#">Write a Post</a>
+                                    <a class="dropdown-item" href="#">Contact Admin</a>
+                                    <!--li class="divider"></li-->
                                     <!--a class="dropdown-item" href="#">Another action</a-->
                                 </ul>
                             </li>

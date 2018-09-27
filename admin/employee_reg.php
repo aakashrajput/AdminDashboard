@@ -93,6 +93,14 @@ include "bluf_connection.php";
                                                         </div>
                                                     </div>
                                                 </div>
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <label>Randomply Generated Password</label>
+                                                            <textarea type="Password" rows="4" cols="80" class="form-control" placeholder="Employee Generated Password" name="emp_pass" id="pass" value=""></textarea>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                                 <button type="submit" name="submit" value="Register" class="btn btn-info btn-fill pull-right">Add Employee</button>
                                                 <div class="clearfix"></div>
                                             </div>
@@ -114,6 +122,7 @@ include "bluf_connection.php";
                                 $size = $_FILES['emp_img']['size'];
                                 $type = $_FILES['emp_img']['type'];
                                 $tmp_name = $_FILES['emp_img']['tmp_name'];
+                                $emp_pass = md5('emp_pass');
                                 $username = $_SESSION['username'];
                                 //$cv_tmp_name = $_FILES['emp_cv']['tmp_name'];
                                 }
@@ -125,13 +134,14 @@ include "bluf_connection.php";
                                 if (isset($emp_img) &!empty($emp_img)){
                                     if(in_array($_FILES['emp_img']['type'], $types) && $size <= $maxsize) {
                                       if(move_uploaded_file($tmp_name, $location.$emp_img)) {
-                                         $sql= "INSERT INTO `employee_reg` (emp_name, emp_domain, emp_email, emp_state, emp_contact, emp_skills, emp_img, emp_dor, emp_about, username, location) VALUES ('$emp_name','$emp_domain','$emp_email','$emp_state','$emp_contact', '$emp_skills', '$emp_img','$emp_dor', '$emp_about', '$username', '$location$emp_img')";
+                                         $sql= "INSERT INTO `employee_reg` (emp_name, emp_domain, emp_email, emp_state, emp_contact, emp_skills, emp_img, emp_dor, emp_about,emp_pass, username, location) VALUES ('$emp_name','$emp_domain','$emp_email','$emp_state','$emp_contact', '$emp_skills', '$emp_img','$emp_dor', '$emp_about','$emp_pass', '$username', '$location$emp_img')";
                                         $res = mysqli_query($link, $sql);
                                         if($res) {
                                           ?>
                                           <div class="alert alert-success col-lg-12 col-lg-push-0">
                                               Employee Added successfully
                                           </div>
+
                                           <?php
 
                                         }
@@ -149,8 +159,74 @@ include "bluf_connection.php";
 
             ?>
 
+<script>
+(function() {
+        var randomString = function(length) {
+
+            var text = "";
+
+            var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+            for(var i = 0; i < length; i++) {
+
+                text += possible.charAt(Math.floor(Math.random() * possible.length));
+
+            }
+
+            return text;
+        }
+
+        // random string length
+        var random = randomString(10);
+
+        // insert random string to the field
+        var elem = document.getElementById("pass").value = random;
+
+    })();
+    </script>
+    <?php
+    //If the form is submitted
+    if(isset($_POST['submit'])) {
+
+    	//Check to make sure that the name field is not empty
+    	if(trim($_POST['emp_name']) == '') {
+    		$hasError = true;
+    	} else {
+    		$name = trim($_POST['emp_name']);
+    	}
+      if(trim($_POST['emp_pass']) == '') {
+    		$hasError = true;
+    	} else {
+    		$pass = trim($_POST['emp_pass']);
+    	}
+
+    	//Check to make sure that the subject field is not empty
+
+    		$subject = "Spartans Hub Employe Login Details.";
 
 
+    	//Check to make sure sure that a valid email address is submitted
+    	if(trim($_POST['emp_email']) == '')  {
+    		$hasError = true;
+    	} else if (!filter_var( trim($_POST['emp_email'], FILTER_VALIDATE_EMAIL ))) {
+    		$hasError = true;
+    	} else {
+    		$emailTo = trim($_POST['emp_email']);
+    	}
+
+    	$comments = "Spartans Hub Employe Login Details\n Visit https://employee.spartanshub.com and login with details given below.";
+
+    	//If there is no error, send the email
+    	if(!isset($hasError)) {
+    		$email = "ninatapenz@gmail.com"; // Put your own email address here
+    		$body = "\nSubject: $subject \n\n\n $comments\n\n\nUsername:$name \n\nPassword: $pass";
+    		$headers = 'From: Spartans Hub <'.$emailTo.'>' . "\r\n" . 'Reply-To: ' . 'support@spartanshub.com';
+
+    		mail($emailTo, $subject, $body, $headers);
+    		$emailSent = true;
+    	}
+    }
+    ?>
 <?php
 include "footer.php"
 ?>

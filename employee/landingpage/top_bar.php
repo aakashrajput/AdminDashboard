@@ -18,7 +18,7 @@ include "bluf_connection.php"
                                            <div class="numbers">
                                                <p class="card-category">Ongoing Projects</p>
                                                <?php
-                                               $employee_reg = mysqli_query($link,"select * from employee_reg");
+                                               $employee_reg = mysqli_query($link,"select * from active_projects");
                                                $employees = mysqli_num_rows($employee_reg);
                                                ?>
                                                <h4 class="card-title"><?php echo"$employees" ?></h4>

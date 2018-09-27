@@ -10,20 +10,21 @@ $errors = array();
 $db = mysqli_connect('localhost', 'root', '', 'spartanshub');
 
 
+
 // LOGIN USER
 if (isset($_POST['login_user'])) {
   $emp_name = mysqli_real_escape_string($db, $_POST['emp_name']);
-  $emp_pass = mysqli_real_escape_string($db, $_POST['emp_pass']);
+  $pass = mysqli_real_escape_string($db, $_POST['emp_pass']);
 
   if (empty($emp_name)) {
     array_push($errors, "Username is required");
   }
-  if (empty($emp_pass)) {
+  if (empty($pass)) {
     array_push($errors, "Password is required");
   }
 
   if (count($errors) == 0) {
-    $emp_pass = md5($emp_pass);
+    $emp_pass = md5('emp_pass');
     $query = "SELECT * FROM employee_reg WHERE emp_name='$emp_name' AND emp_pass='$emp_pass'";
     $results = mysqli_query($db, $query);
     if (mysqli_num_rows($results) == 1) {

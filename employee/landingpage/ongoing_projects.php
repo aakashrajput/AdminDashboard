@@ -11,7 +11,7 @@ include "bluf_connection.php"
                               <div class="card-body table-full-width table-responsive">
                                   <table class="table table-hover">
                                     <?php
-                                    $res = mysqli_query($link,"select * from employee_reg ORDER BY id DESC LIMIT 4");
+                                    $res = mysqli_query($link,"select * from active_projects ORDER BY id DESC LIMIT 4");
                                       echo "<thead>";
                                           echo "<th>";echo "Team Leader";echo "</th>";
                                           echo "<th>";echo "Total Team Members";echo "</th>";
@@ -24,10 +24,11 @@ include "bluf_connection.php"
                                 {
                                       echo "<tbody>";
                                           echo "<tr>";
-                                              echo"<td style='color:green;'>";echo $row["emp_name"]; echo"</td>";
-                                              echo"<td>";echo $row["emp_email"]; echo"</td>";
-                                              echo"<td>";echo $row["emp_contact"]; echo"</td>";
-                                              echo"<td>";echo $row["emp_domain"]; echo"</td>";
+                                              echo"<td style='color:green;'>";echo $row["pr_leader"]; echo"</td>";
+                                              echo"<td>";echo $row["pr_members"]; echo"</td>";
+                                              echo"<td>";echo $row["pr_name"]; echo"</td>";
+                                              echo"<td>";echo $row["pr_date"]; echo"</td>";
+                                              echo"<td>";echo $row["pr_cdate"]; echo"</td>";
                                               echo"<td>";echo $row["username"]; echo"</td>";
                                           echo "</tr>";
                                       echo "</tbody>";

@@ -1,4 +1,11 @@
 <?php
+// Import PHPMailer classes into the global namespace
+// These must be at the top of your script, not inside a function
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+//Load Composer's autoloader
+require './phpmailer/vendor/autoload.php';
 include "header.php";
 include "bluf_connection.php";
 ?>
@@ -141,7 +148,61 @@ include "bluf_connection.php";
                                           <div class="alert alert-success col-lg-12 col-lg-push-0">
                                               Employee Added successfully
                                           </div>
+                                          <?php
+                                          $mail = new PHPMailer(true);                              // Passing `true` enables exceptions
+                                          try {
+                                              //Server settings
+                                              //$mail->SMTPDebug = 1;
+                                                                                                         // Enable verbose debug output
+                                              $mail->isSMTP();
+                                                                                  // Set mailer to use SMTP
+                                              $mail->Host = 'your email provider server';  // Specify main and backup SMTP servers
+                                              $mail->SMTPAuth = true;                               // Enable SMTP authentication
+                                              $mail->Username = 'youremail';                 // SMTP username
+                                              $mail->Password = 'your pass';                           // SMTP password
+                                              $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
+                                              $mail->Port = 465;
+                                              $name = $emp_name;
+                                              $pass = $_POST['emp_pass'];                                 // TCP port to connect to
 
+                                              //Recipients
+                                              $mail->setFrom('senders email', 'name');
+                                              $mail->addAddress($emp_email);     // Add a recipient
+                                              $body = '<html>
+                                              <head>
+                                              <title>Spartans Hub</title>
+                                              </head>
+                                              <body>
+                                                <center><img src="https://www.spartanshub.com/Logo-gif.gif" /></center>
+                                                <center><h2 style="color:black;">Congratulation on joining Spartans Hub.</h2></center>
+                                              <center><h4 style="color:#333;">Please Do not reply on this mail as we will not get notified.</h2></center>
+                                              <center><p>This Page Contains the Employee login Credentials of Spartans Hub.</p><p>Visit <a href="http://employee.spartanshub.com">Employee Login Page</a> and login with the below given details</p></center>
+                                              <center><table>
+                                              <tr>
+                                              <th>Username</th>
+                                              <th>Password</th>
+                                              </tr>
+                                              <tr>
+                                              <td>'.$name.'</td>
+                                              <td>'.$pass.'</td>
+                                              </tr>
+                                              </table>
+                                              <p style="color:#654">Spartans Hub 2018</p></center>
+                                              </body>
+                                              </html>';
+
+                                              //Content
+                                              $mail->isHTML(true);                                  // Set email format to HTML
+                                              $mail->Subject = 'Spartans Hub Employee Login Credentials';
+                                              $mail->Body    = $body;
+                                              $mail->AltBody = strip_tags($body);
+
+                                              $mail->send();
+                                              echo 'Message has been sent';
+                                          } catch (Exception $e) {
+                                              echo 'Message could not be sent. Mailer Error: ', $mail->ErrorInfo;
+                                          }
+                                          ?>
                                           <?php
 
                                         }
@@ -184,49 +245,6 @@ include "bluf_connection.php";
 
     })();
     </script>
-    <?php
-    //If the form is submitted
-    if(isset($_POST['submit'])) {
-
-    	//Check to make sure that the name field is not empty
-    	if(trim($_POST['emp_name']) == '') {
-    		$hasError = true;
-    	} else {
-    		$name = trim($_POST['emp_name']);
-    	}
-      if(trim($_POST['emp_pass']) == '') {
-    		$hasError = true;
-    	} else {
-    		$pass = trim($_POST['emp_pass']);
-    	}
-
-    	//Check to make sure that the subject field is not empty
-
-    		$subject = "Spartans Hub Employe Login Details.";
-
-
-    	//Check to make sure sure that a valid email address is submitted
-    	if(trim($_POST['emp_email']) == '')  {
-    		$hasError = true;
-    	} else if (!filter_var( trim($_POST['emp_email'], FILTER_VALIDATE_EMAIL ))) {
-    		$hasError = true;
-    	} else {
-    		$emailTo = trim($_POST['emp_email']);
-    	}
-
-    	$comments = "Spartans Hub Employe Login Details\n Visit https://employee.spartanshub.com and login with details given below.";
-
-    	//If there is no error, send the email
-    	if(!isset($hasError)) {
-    		$email = "ninatapenz@gmail.com"; // Put your own email address here
-    		$body = "\nSubject: $subject \n\n\n $comments\n\n\nUsername:$name \n\nPassword: $pass";
-    		$headers = 'From: Spartans Hub <'.$emailTo.'>' . "\r\n" . 'Reply-To: ' . 'support@spartanshub.com';
-
-    		mail($emailTo, $subject, $body, $headers);
-    		$emailSent = true;
-    	}
-    }
-    ?>
 <?php
 include "footer.php"
 ?>

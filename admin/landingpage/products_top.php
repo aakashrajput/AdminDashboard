@@ -16,7 +16,7 @@ include "bluf_connection.php"
                                           echo "<th>";echo "Name";echo "</th>";
                                           echo "<th>";echo "Category";echo "</th>";
                                           echo "<th>";echo "Project Head";echo "</th>";
-                                          echo "<th>";echo "Date-Of-Submission";echo "</th>";
+                                          //echo "<th>";echo "Date-Of-Submission";echo "</th>";
                                           echo "<th>";echo "Project Info";echo "</th>";
                                           echo "<th>";echo "Added By";echo "</th>";
                                       echo "</thead>";
@@ -27,7 +27,7 @@ include "bluf_connection.php"
                                               echo"<td style='color:blue;'>";echo $row["pname"]; echo"</td>";
                                               echo"<td>";echo $row["pcategory"]; echo"</td>";
                                               echo"<td>";echo $row["phead"]; echo"</td>";
-                                              echo"<td>";echo $row["doi"]; echo"</td>";
+                                              //echo"<td>";echo $row["doi"]; echo"</td>";
                                               echo"<td>";echo $row["pinfo"]; echo"</td>";
                                               echo"<td>";echo $row["byName"]; echo"</td>";
                                           echo "</tr>";

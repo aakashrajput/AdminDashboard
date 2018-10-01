@@ -52,12 +52,6 @@ include "bluf_connection.php";
                                                             <input type="text" class="form-control" name="phead" placeholder="Company" value="">
                                                         </div>
                                                     </div>
-                                                    <div class="col-md-6">
-                                                        <div class="form-group">
-                                                          <label>Date of Issue</label>
-                                                          <input type="date" class="form-control" type="Date" name="doi" data-msg-required=" Date of issue(dd-mm=yy)" placeholder="Date of Birth (dd-mm-yy]" required="">
-                                                        </div>
-                                                    </div>
                                                 </div>
 
                                                 <div class="row">
@@ -85,13 +79,12 @@ include "bluf_connection.php";
                                 <?php
             if(isset($_POST["submit"]))
             {
-                mysqli_query($link,"insert into products
+                mysqli_query($link,"insert into products_reg
                 values(
                 '',
                 '$_POST[pname]',
                 '$_POST[pcategory]',
                 '$_POST[phead]',
-                '$_POST[doi]',
                 '$_POST[pinfo]',
                 '$_POST[product_info]',
                 '$_SESSION[username]'

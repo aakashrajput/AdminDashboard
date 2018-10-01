@@ -86,7 +86,7 @@ session_start();
                     <!--a href="https://www.creative-tim.com" class="simple-text logo-mini">
                         Spartans Hub
                     </a-->
-                    <a href="https://www.creative-tim.com" class="simple-text logo-normal">
+                    <a href="http://www.admin.spartanshub.com" class="simple-text logo-normal">
                         Spartans Hub
                     </a>
                 </div>
@@ -277,7 +277,7 @@ session_start();
                                     <a class="dropdown-item" href="./employee_reg.php">Register Employee</a>
                                     <a class="dropdown-item" href="./client_reg.php">Register Client</a>
                                     <li class="divider"></li>
-                                    <a class="dropdown-item" href="./client_reg.php">Assign Project</a>
+                                    <a class="dropdown-item" href="./assign_project.php">Assign Project</a>
                                     <!--a class="dropdown-item" href="#">Another action</a-->
                                 </ul>
                             </li>

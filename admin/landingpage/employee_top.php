@@ -23,7 +23,7 @@ include "bluf_connection.php"
                                 {
                                       echo "<tbody>";
                                           echo "<tr>";
-                                              echo"<td style='color:green;'>";echo $row["emp_name"]; echo"</td>";
+                                              echo"<td style='color:green;'>";echo $row["emp_name2"]; echo"</td>";
                                               echo"<td>";echo $row["emp_email"]; echo"</td>";
                                               echo"<td>";echo $row["emp_contact"]; echo"</td>";
                                               echo"<td>";echo $row["emp_domain"]; echo"</td>";

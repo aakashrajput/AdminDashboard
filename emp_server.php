@@ -27,8 +27,16 @@ if (isset($_POST['login_user'])) {
     $emp_pass = md5('emp_pass');
     $query = "SELECT * FROM employee_reg WHERE emp_name='$emp_name' AND emp_pass='$emp_pass'";
     $results = mysqli_query($db, $query);
+    $row = mysqli_fetch_array($results);
     if (mysqli_num_rows($results) == 1) {
       $_SESSION['emp_name'] = $emp_name;
+      foreach ($row as $key => $value){
+        if(is_string($key)) {
+          $_SESSION [$key]= $value;
+        //echo $key. ":".$value."<br>";
+        }
+      }
+      echo $_SESSION['emp_email'];
       $_SESSION['success'] = "You are now logged in";
       header('location: ./employee/dashboard.php');
     }else {

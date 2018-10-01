@@ -32,11 +32,17 @@ include "bluf_connection.php";
                                                     </div>
                                                     <div class="col-md-3 px-1">
                                                         <div class="form-group">
-                                                            <label>Full Name</label>
+                                                            <label>Username Name</label>
                                                             <input type="text" class="form-control" name="emp_name" placeholder="Full Name" value="">
                                                         </div>
                                                     </div>
-                                                    <div class="col-md-4">
+                                                    <div class="col-md-3 px-1">
+                                                        <div class="form-group">
+                                                            <label>Full Name</label>
+                                                            <input type="text" class="form-control" name="emp_name2" placeholder="Full Name" value="">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12">
                                                         <div class="form-group">
                                                             <label >Domain</label>
                                                               <select class="form-control" name="emp_domain" >
@@ -92,14 +98,14 @@ include "bluf_connection.php";
                                                     </div>
                                                 </div>
 
-                                                <div class="row">
+                                                <!--div class="row">
                                                     <div class="col-md-12">
                                                         <div class="form-group">
                                                             <label>About</label>
                                                             <textarea rows="4" cols="80" class="form-control" placeholder="About the Employee" name="emp_about" value=""></textarea>
                                                         </div>
                                                     </div>
-                                                </div>
+                                                </div-->
                                                 <div class="row">
                                                     <div class="col-md-12">
                                                         <div class="form-group">
@@ -118,6 +124,7 @@ include "bluf_connection.php";
 
                                 if (isset($_FILES) & !empty($_FILES)) {
                                 $emp_name = $_POST['emp_name'];
+                                $emp_name2 = $_POST['emp_name2'];
                                 $emp_domain = $_POST['emp_domain'];
                                 $emp_email = $_POST['emp_email'];
                                 $emp_state = $_POST['emp_state'];
@@ -125,7 +132,7 @@ include "bluf_connection.php";
                                 $emp_skills = $_POST['emp_skills'];
                                 $emp_img = $_FILES['emp_img']['name'];
                                 $emp_dor = $_POST['emp_dor'];
-                                $emp_about = $_POST['emp_about'];
+                                //$emp_about = $_POST['emp_about'];
                                 $size = $_FILES['emp_img']['size'];
                                 $type = $_FILES['emp_img']['type'];
                                 $tmp_name = $_FILES['emp_img']['tmp_name'];
@@ -141,7 +148,7 @@ include "bluf_connection.php";
                                 if (isset($emp_img) &!empty($emp_img)){
                                     if(in_array($_FILES['emp_img']['type'], $types) && $size <= $maxsize) {
                                       if(move_uploaded_file($tmp_name, $location.$emp_img)) {
-                                         $sql= "INSERT INTO `employee_reg` (emp_name, emp_domain, emp_email, emp_state, emp_contact, emp_skills, emp_img, emp_dor, emp_about,emp_pass, username, location) VALUES ('$emp_name','$emp_domain','$emp_email','$emp_state','$emp_contact', '$emp_skills', '$emp_img','$emp_dor', '$emp_about','$emp_pass', '$username', '$location$emp_img')";
+                                         $sql= "INSERT INTO `employee_reg` (emp_name,emp_name2, emp_domain, emp_email, emp_state, emp_contact, emp_skills, emp_img, emp_dor, /*emp_about,*/emp_pass, username, location) VALUES ('$emp_name','$emp_name2','$emp_domain','$emp_email','$emp_state','$emp_contact', '$emp_skills', '$emp_img','$emp_dor','$emp_pass', '$username', '$location$emp_img')";
                                         $res = mysqli_query($link, $sql);
                                         if($res) {
                                           ?>
@@ -156,17 +163,17 @@ include "bluf_connection.php";
                                                                                                          // Enable verbose debug output
                                               $mail->isSMTP();
                                                                                   // Set mailer to use SMTP
-                                              $mail->Host = 'your email provider server';  // Specify main and backup SMTP servers
+                                              $mail->Host = '';  // Specify main and backup SMTP servers
                                               $mail->SMTPAuth = true;                               // Enable SMTP authentication
-                                              $mail->Username = 'youremail';                 // SMTP username
-                                              $mail->Password = 'your pass';                           // SMTP password
-                                              $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
+                                              $mail->Username = '';                 // SMTP username
+                                              $mail->Password = '';                           // SMTP password
+                                              $mail->SMTPSecure = 'ssl';                           // Enable TLS encryption, `ssl` also accepted
                                               $mail->Port = 465;
                                               $name = $emp_name;
                                               $pass = $_POST['emp_pass'];                                 // TCP port to connect to
 
                                               //Recipients
-                                              $mail->setFrom('senders email', 'name');
+                                              $mail->setFrom('', '');
                                               $mail->addAddress($emp_email);     // Add a recipient
                                               $body = '<html>
                                               <head>

@@ -86,7 +86,7 @@ session_start();
                     <!--a href="https://www.creative-tim.com" class="simple-text logo-mini">
                         Spartans Hub
                     </a-->
-                    <a href="https://www.creative-tim.com" class="simple-text logo-normal">
+                    <a href="" class="simple-text logo-normal">
                         Spartans Hub
                     </a>
                 </div>
